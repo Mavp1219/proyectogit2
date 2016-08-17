@@ -56,9 +56,19 @@ public class principal extends javax.swing.JFrame {
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 134, 80, 20));
 
         cmdcalcular.setText("CALCULAR");
+        cmdcalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdcalcularActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         cmdborrar.setText("BORRAR");
+        cmdborrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdborrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, -1));
         jPanel1.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 100, 20));
         jPanel1.add(txtresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 100, 20));
@@ -78,6 +88,27 @@ public class principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
+        double valor1,saldof, suma;
+        String res;
+        
+        valor1 = Double.parseDouble(txtvalor1.getText());
+        
+        saldof = valor1 * 1.5 / 100;
+        
+        suma = valor1 + saldof;
+        
+        txtresultado.setText(String.valueOf(suma));
+        
+    }//GEN-LAST:event_cmdcalcularActionPerformed
+
+    private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed
+        txtvalor1.setText("");
+        txtresultado.setText("");
+        
+        txtvalor1.requestFocusInWindow();
+    }//GEN-LAST:event_cmdborrarActionPerformed
 
     /**
      * @param args the command line arguments
