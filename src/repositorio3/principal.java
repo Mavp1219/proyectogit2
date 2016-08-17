@@ -48,7 +48,7 @@ public class principal extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel1.setText("SU SALDO FINALEN EL BANCO");
+        jLabel1.setText("SU SALDO FINAL EN EL BANCO");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 230, 40));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -75,6 +75,8 @@ public class principal extends javax.swing.JFrame {
         });
         jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, -1));
         jPanel1.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 120, 30));
+
+        txtresultado.setEditable(false);
         jPanel1.add(txtresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 140, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
