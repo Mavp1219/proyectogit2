@@ -27,17 +27,53 @@ public class principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel4 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        cmdcalcular = new javax.swing.JButton();
+        cmdborrar = new javax.swing.JButton();
+        txtvalor1 = new javax.swing.JTextField();
+        txtresultado = new javax.swing.JTextField();
+
+        jLabel4.setText("jLabel4");
+
+        jTextField3.setText("jTextField3");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("SALDO FINAL BANCO");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 10, 130, 20));
+
+        jLabel2.setText("ESCRIBA SU SALDO INICIAL :");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(13, 54, 150, 20));
+
+        jLabel3.setText("SALDO FINAL :");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 134, 80, 20));
+
+        cmdcalcular.setText("CALCULAR");
+        jPanel1.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
+
+        cmdborrar.setText("BORRAR");
+        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, -1));
+        jPanel1.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 100, 20));
+        jPanel1.add(txtresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 100, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +115,15 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdborrar;
+    private javax.swing.JButton cmdcalcular;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField txtresultado;
+    private javax.swing.JTextField txtvalor1;
     // End of variables declaration//GEN-END:variables
 }
