@@ -96,15 +96,15 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
-        double valor1,saldof, suma;
+        double valor1,saldof, resta;
         
         valor1 = Double.parseDouble(txtvalor1.getText());
         
-        saldof = valor1 * 1.5 / 100;
+        saldof = valor1 * 0.015;
         
-        suma = valor1 + saldof;
+        resta = valor1 - saldof;
         
-        txtresultado.setText(String.valueOf(suma));
+        txtresultado.setText(String.valueOf(resta));
         
     }//GEN-LAST:event_cmdcalcularActionPerformed
 
