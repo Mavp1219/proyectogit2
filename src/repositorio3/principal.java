@@ -97,7 +97,6 @@ public class principal extends javax.swing.JFrame {
 
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
         double valor1,saldof, suma;
-        String res;
         
         valor1 = Double.parseDouble(txtvalor1.getText());
         
