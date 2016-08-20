@@ -104,17 +104,24 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
-        double valor1 = 0, saldof, resta;
+        double valor1, saldof, resta;
 
         txtresultado.setText("");
 
         if (txtvalor1.getText().trim().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Ingrese el Saldo Inicial", "Error", JOptionPane.ERROR_MESSAGE);
             txtvalor1.requestFocusInWindow();
+            txtvalor1.selectAll();;
         } else {
 
             valor1 = Double.parseDouble(txtvalor1.getText());
 
+            if(valor1 == 0){
+                JOptionPane.showMessageDialog(this, "Su saldo debe ser diferente de 0", "Error", JOptionPane.ERROR_MESSAGE);
+                txtvalor1.requestFocusInWindow();
+                txtvalor1.selectAll();;
+            }
+            
             saldof = valor1 * 0.015;
 
             resta = valor1 - saldof;
