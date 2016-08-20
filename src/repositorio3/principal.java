@@ -5,6 +5,8 @@
  */
 package repositorio3;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author user
@@ -74,6 +76,12 @@ public class principal extends javax.swing.JFrame {
             }
         });
         jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, -1));
+
+        txtvalor1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtvalor1KeyTyped(evt);
+            }
+        });
         jPanel1.add(txtvalor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 120, 30));
 
         txtresultado.setEditable(false);
@@ -96,24 +104,43 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
-        double valor1,saldof, resta;
-        
-        valor1 = Double.parseDouble(txtvalor1.getText());
-        
-        saldof = valor1 * 0.015;
-        
-        resta = valor1 - saldof;
-        
-        txtresultado.setText(String.valueOf(resta));
-        
+        double valor1 = 0, saldof, resta;
+
+        txtresultado.setText("");
+
+        if (txtvalor1.getText().trim().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Ingrese el Saldo Inicial", "Error", JOptionPane.ERROR_MESSAGE);
+            txtvalor1.requestFocusInWindow();
+        } else {
+
+            valor1 = Double.parseDouble(txtvalor1.getText());
+
+            saldof = valor1 * 0.015;
+
+            resta = valor1 - saldof;
+
+            txtresultado.setText(String.valueOf(resta));
+
+        }
+
+
     }//GEN-LAST:event_cmdcalcularActionPerformed
 
     private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed
         txtvalor1.setText("");
         txtresultado.setText("");
-        
+
         txtvalor1.requestFocusInWindow();
     }//GEN-LAST:event_cmdborrarActionPerformed
+
+    private void txtvalor1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtvalor1KeyTyped
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtvalor1KeyTyped
 
     /**
      * @param args the command line arguments
